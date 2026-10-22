@@ -1,0 +1,14 @@
+{
+  "emeraldwalk.runonsave": {
+    "ignoreUnchangedFiles": true,
+    "shell": "C:\\Windows\\System32\\cmd.exe",
+    "commands": [
+      {
+        "match": ".*",
+        "notMatch": "[\\\\/]\\.git[\\\\/]",
+        "cmd": "git -C \"${workspaceFolder}\" add . && (git -C \"${workspaceFolder}\" diff --cached --quiet || git -C \"${workspaceFolder}\" commit -m \"Auto update\") && git -C \"${workspaceFolder}\" push origin main",
+        "autoShowOutputPanel": "error"
+      }
+    ]
+  }
+}
